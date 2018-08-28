@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.*;
 import org.springframework.stereotype.Service;
 
-@CacheConfig(cacheNames = "emp")//全局配置，下面的就不用配置这个属性了
+@CacheConfig(cacheNames = "emp",cacheManager = "employeeCacheManager")//全局配置，下面的就不用配置这个属性了
 @Service
 public class EmployeeService {
 
